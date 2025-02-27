@@ -15,7 +15,7 @@ async function encodeImage() {
   formData.append("message", message);
   
   try {
-    const response = await fetch("http://localhost:5000/encode", {
+    const response = await fetch("https://stegano-engine-3jhucgk63-ronitraj07s-projects.vercel.app/encode", { ... });
       method: "POST",
       body: formData
     });
