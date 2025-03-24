@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Steganography Tool</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Dark Mode Toggle -->
+  <div class="dark-mode-toggle">
+    <label>
+      <input type="checkbox" id="darkModeToggle">
+      <span class="slider"></span>
+    </label>
+  </div>
+
+  <div class="wrapper">
+    <header>
+      <h1>Steganography Tool 🔐</h1>
+      <p>Hide & Reveal Messages in Images, Videos & Ciphertext</p>
+    </header>
+
+    <!-- Tab Navigation -->
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="imageTab">🖼 Image</button>
+      <button class="tab-btn" data-tab="videoTab">🎥 Video</button>
+      <button class="tab-btn" data-tab="cipherTab">🔤 Ciphertext</button>
+    </div>
+
+    <main>
+      <!-- Image Tab -->
+      <div id="imageTab" class="tab-content active">
+        <form id="encodeImageForm">
+          <label class="custom-file">
+            <input type="file" name="file" id="imageInput" accept="image/*" required>
+            <span>Choose Image</span>
+          </label>
+          <input type="text" name="message" id="messageInputImage" placeholder="Enter secret message" required>
+          <div class="btn-group">
+            <button type="submit">Encode</button>
+          </div>
+        </form>
+
+        <form id="decodeImageForm">
+          <label class="custom-file">
+            <input type="file" name="file" id="decodeImageInput" accept="image/*" required>
+            <span>Choose Image to Decode</span>
+          </label>
+          <div class="btn-group">
+            <button type="submit">Decode</button>
+          </div>
+        </form>
+
+        <!-- Encoded Image Display -->
+        <div id="encodedImageContainer" style="display: none; text-align: center; margin-top: 10px;">
+          <img id="encodedImage" style="max-width: 100%; display: block;">
+          <a id="downloadImage" style="color: blue; display: none;" download="encoded_image.png">Download Encoded Image</a>
+        </div>
+
+        <p id="decodedImageText"></p>
+      </div>
+
+      <!-- Video Tab -->
+      <div id="videoTab" class="tab-content">
+        <form id="encodeVideoForm">
+          <label class="custom-file">
+            <input type="file" name="file" id="videoInput" accept="video/*" required>
+            <span>Choose Video</span>
+          </label>
+          <input type="text" name="message" id="messageInputVideo" placeholder="Enter secret message" required>
+          <div class="btn-group">
+            <button type="submit">Encode</button>
+          </div>
+        </form>
+
+        <form id="decodeVideoForm">
+          <label class="custom-file">
+            <input type="file" name="file" id="decodeVideoInput" accept="video/*" required>
+            <span>Choose Video to Decode</span>
+          </label>
+          <div class="btn-group">
+            <button type="submit">Decode</button>
+          </div>
+        </form>
+
+        <!-- Encoded Video Display -->
+        <div id="encodedVideoContainer" style="display: none; text-align: center; margin-top: 10px;">
+          <video id="encodedVideo" controls style="max-width: 100%;"></video>
+          <a id="downloadVideo" style="color: blue; display: none;" download="encoded_video.mp4">Download Encoded Video</a>
+        </div>
+
+        <p id="decodedVideoText"></p>
+      </div>
+
+      <!-- Ciphertext Tab -->
+      <div id="cipherTab" class="tab-content">
+        <form id="encryptTextForm">
+          <textarea name="text" id="cipherInput" placeholder="Enter text to encrypt" required></textarea>
+          <div class="btn-group">
+            <button type="submit">Encrypt</button>
+          </div>
+        </form>
+
+        <form id="decryptTextForm">
+          <textarea name="text" id="decryptInput" placeholder="Enter encrypted text" required></textarea>
+          <div class="btn-group">
+            <button type="submit">Decrypt</button>
+          </div>
+        </form>
+
+        <p id="encryptedTextResult"></p>
+        <p id="decryptedTextResult"></p>
+      </div>
+    </main>
+
+    <footer>
+      <p>Created by Ronitraj</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

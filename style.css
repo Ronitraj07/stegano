@@ -1,0 +1,163 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: #f5f5f5;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    transition: 0.3s;
+  }
+  
+  .wrapper {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: 0.3s;
+  }
+  
+  header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  header h1 {
+    font-size: 2.5em;
+    margin-bottom: 5px;
+    color: #3498db;
+  }
+  
+  header p {
+    font-size: 1.1em;
+    color: #666;
+  }
+  
+  /* Tabs */
+  .tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .tab-btn {
+    background: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin: 0 5px;
+    border-radius: 5px;
+    transition: 0.3s;
+  }
+  
+  .tab-btn:hover, .tab-btn.active {
+    background: #2980b9;
+  }
+  
+  .tab-content {
+    display: none;
+    text-align: center;
+  }
+  
+  .tab-content.active {
+    display: block;
+  }
+  
+  /* File Upload & Input */
+  .custom-file {
+    display: inline-block;
+    background: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .custom-file:hover {
+    background: #2980b9;
+  }
+  
+  .custom-file input {
+    display: none;
+  }
+  
+  input, textarea {
+    width: 80%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .btn-group {
+    margin-top: 15px;
+  }
+  
+  .btn-group button {
+    padding: 10px 20px;
+    border: none;
+    background: #2ecc71;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+    transition: 0.3s;
+  }
+  
+  .btn-group button:hover {
+    background: #27ae60;
+  }
+  
+  /* Dark Mode */
+  .dark-mode-toggle {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+  
+  .dark-mode-toggle input {
+    display: none;
+  }
+  
+  .dark-mode-toggle .slider {
+    width: 40px;
+    height: 20px;
+    background: #ddd;
+    border-radius: 15px;
+    display: inline-block;
+    position: relative;
+    transition: 0.3s;
+  }
+  
+  .dark-mode-toggle input:checked + .slider {
+    background: #27ae60;
+  }
+  
+  body.dark-mode {
+    background: #333;
+    color: white;
+  }
+  
+  body.dark-mode .wrapper {
+    background: #444;
+    color: white;
+  }
+  
+  body.dark-mode .tab-btn {
+    background: #2ecc71;
+  }
+  
+  footer {
+    text-align: center;
+    margin-top: 20px;
+    color: #999;
+    font-size: 0.9em;
+  }
+  
