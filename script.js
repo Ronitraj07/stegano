@@ -1,5 +1,5 @@
 // Backend URL
-const BASE_URL = "http://localhost:5000";
+const BASE_URL = "https://6148761c-de82-4979-ad37-6c30b37d924c-00-327b08h6rrqii.sisko.replit.dev";
 
 // ✅ Tab Switching
 document.querySelectorAll(".tab-btn").forEach(button => {
